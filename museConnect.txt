@@ -1,0 +1,7 @@
+Device 00:55:da:b5:0d:79 (public), RSSI=-38 dB
+  Flags = 06
+  Complete Local Name = Muse-0D79
+  Incomplete 16b Services = 0000fe8d-0000-1000-8000-00805f9b34fb
+  0x12 = 18001800
+  Tx Power = 02
+  Manufacturer = 30000104303030010010

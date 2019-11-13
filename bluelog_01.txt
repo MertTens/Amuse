@@ -1,0 +1,115 @@
+Discovered device 68:64:4b:26:34:39
+Discovered device cd:12:86:93:f8:94
+Discovered device 5b:e3:6a:17:1c:64
+Discovered device 6c:94:f8:f2:0d:2c
+Received new data from cd:12:86:93:f8:94
+Discovered device 54:b0:0d:bf:58:91
+Discovered device 46:6b:62:b3:8a:22
+Discovered device 5e:06:35:fa:a3:b0
+Discovered device 28:11:a5:d6:64:b4
+Discovered device 57:6a:7e:90:c9:af
+Discovered device 45:84:86:4f:a0:e5
+Discovered device e8:24:09:cc:70:db
+Discovered device 00:55:da:b5:0d:79
+Discovered device 18:b4:30:e7:15:dc
+Discovered device 64:1c:ae:74:72:27
+Discovered device 6c:ca:96:40:ca:7b
+Discovered device fc:d0:40:37:01:91
+Discovered device 78:6c:b1:9a:7d:b3
+Discovered device 59:1c:2c:41:85:d8
+Discovered device 59:e0:9c:11:eb:0f
+Discovered device f0:18:98:aa:5b:51
+Discovered device a4:d1:8c:7b:9a:e1
+Received new data from 59:e0:9c:11:eb:0f
+Discovered device 21:07:26:8c:b3:6b
+Discovered device e4:4a:e1:16:6c:e4
+Device 68:64:4b:26:34:39 (public), RSSI=-62 dB
+  Flags = 1a
+  Manufacturer = 4c000906030ec0a8021e
+Device cd:12:86:93:f8:94 (random), RSSI=0 dB
+  Flags = 06
+  Complete 128b Services = 6a4e3e10-667b-11e3-949a-0800200c9a66
+  Manufacturer = 87000a83
+  16b Service Data = 103e001240
+  Complete Local Name = Forerunner 935
+Device 5b:e3:6a:17:1c:64 (random), RSSI=0 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001005031cbfbaf8
+Device 6c:94:f8:f2:0d:2c (public), RSSI=-66 dB
+  Flags = 1a
+  Manufacturer = 4c0009060317c0a8000d
+Device 54:b0:0d:bf:58:91 (random), RSSI=-38 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001006131e15b069bd
+Device 46:6b:62:b3:8a:22 (random), RSSI=0 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001005031c0d8be0
+Device 5e:06:35:fa:a3:b0 (random), RSSI=0 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001006131e57fc6e1c
+Device 28:11:a5:d6:64:b4 (public), RSSI=-62 dB
+  Flags = 1a
+  Complete 16b Services = 0000febe-0000-1000-8000-00805f9b34fb
+  Manufacturer = 010b0100d35e7bee80
+  Tx Power = 08
+  Complete Local Name = LE-reserved_C
+Device 57:6a:7e:90:c9:af (random), RSSI=-16 dB
+  Flags = 06
+  Manufacturer = 4c000c0e008803eb656bc0333588fe845306
+Device 45:84:86:4f:a0:e5 (random), RSSI=-42 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c0010051118025284
+Device e8:24:09:cc:70:db (random), RSSI=-76 dB
+  Flags = 06
+  Incomplete 16b Services = 0000feaf-0000-1000-8000-00805f9b34fb
+  Complete Local Name = N0AXC
+
+Device 00:55:da:b5:0d:79 (public), RSSI=-38 dB
+  Flags = 06
+  Complete Local Name = Muse-0D79
+  Incomplete 16b Services = 0000fe8d-0000-1000-8000-00805f9b34fb
+  0x12 = 18001800
+  Tx Power = 02
+  Manufacturer = 30000104303030010010
+Device 18:b4:30:e7:15:dc (random), RSSI=-74 dB
+  Flags = 06
+  Incomplete 16b Services = 0000feaf-0000-1000-8000-00805f9b34fb
+  Complete Local Name = N0EXK
+Device 64:1c:ae:74:72:27 (public), RSSI=-56 dB
+  Manufacturer = 75004204018060641cae747227661cae74722601808a00000000
+Device 6c:ca:96:40:ca:7b (random), RSSI=0 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001005031831ddb1
+Device fc:d0:40:37:01:91 (random), RSSI=-52 dB
+  Manufacturer = 4c0012190086b70beef913a7418c3c7d984d0af3b73cbc4f79c8ae0100
+Device 78:6c:b1:9a:7d:b3 (random), RSSI=-76 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c0010051318e922f6
+Device 59:1c:2c:41:85:d8 (random), RSSI=0 dB
+  Flags = 1a
+  Tx Power = 0c
+  Manufacturer = 4c001006131a3ca8dac3
+Device 59:e0:9c:11:eb:0f (random), RSSI=0 dB
+  Complete 16b Services = 0000fe9f-0000-1000-8000-00805f9b34fb
+  16b Service Data = 9ffe0000000000000000000000000000000000000000
+  Manufacturer = e0000105ca7a5cac
+Device f0:18:98:aa:5b:51 (public), RSSI=-16 dB
+  Flags = 06
+  Manufacturer = 4c001005071c05c4b6
+Device a4:d1:8c:7b:9a:e1 (public), RSSI=0 dB
+  Flags = 1a
+  Manufacturer = 4c000906038cc0a80218
+Device 21:07:26:8c:b3:6b (random), RSSI=-78 dB
+  Manufacturer = 060001092002c9b75b3a8c51be53779c5268ac11363a80d326de44000a
+Device e4:4a:e1:16:6c:e4 (random), RSSI=0 dB
+  Flags = 06
+  Manufacturer = aaaa165500514ae4
+  Complete Local Name = Stryd
+  Complete 16b Services = 00001818-0000-1000-8000-00805f9b34fb,00001814-0000-1000-8000-00805f9b34fb,0000180a-0000-1000-8000-00805f9b34fb
