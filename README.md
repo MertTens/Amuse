@@ -49,3 +49,10 @@ Bluepy: https://github.com/IanHarvey/bluepy
 Documentation: http://ianharvey.github.io/bluepy-doc/ 
 
 ## Files
+
+## Notes from Examples
+* There appears to be some asynchronous stuff going on to get information live updated as the EEG sends it. 
+* In eegMuse, whenever we connect, we have to provide a callback function. 
+	- That function is of the form `def eeg(data, trash=True)` (i.e. one input, another optional input) 
+	- The callback is put into a `PeripheralDelegate` object.
+	- We then call `Muse_Peripheral.setDelegate(PeripheralDelegate_Object)`
