@@ -8,10 +8,10 @@ I am starting on my own version of this whole muse interace thing using bluepy i
 Fortunately, it looks like `bluepy` was released under the GNU Public License.
 
 My goals for this are as follows:
-[x] - Connect to the Muse
-[x] - Print the services the Muse offers
-[x] - Get some sort of information from one of the services.
-[ ] - Clarify the EEG vs. other data from the services.
+[x] - Connect to the Muse  
+[x] - Print the services the Muse offers  
+[x] - Get some sort of information from one of the services.  
+[ ] - Clarify the EEG vs. other data from the services.  
 ... 
 
 ## EEG Output Channels (BluePy 'Services')
