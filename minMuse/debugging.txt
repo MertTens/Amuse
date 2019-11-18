@@ -1,0 +1,11 @@
+When trying to re-install bitstring: Requirement already satisfied: bitstring in 
+
+/lib/python3.7/site-packages (3.1.6)
+
+
+BITSTRING IS ALREADY INSTALLED IN (3.1.6)
+
+When trying to run museRecorder.py: Bitstring not found
+
+When printing out the paths of everything: ['/home/aman/Documents/minMuse', '/home/aman/Documents/minMuse/museEnv/lib/python37.zip', '/home/aman/Documents/minMuse/museEnv/lib/python3.7', '/home/aman/Documents/minMuse/museEnv/lib/python3.7/lib-dynload', '/usr/lib/python3.7', '/home/aman/Documents/minMuse/museEnv/lib/python3.7/site-packages']
+
