@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-
 import sys
-sys.path.append("./museEnv/lib/python3.7/site-packages")
+sys.path.append("/home/aman/.local/lib/python3.7/site-packages")
 
 import bitstring
 import pygatt
