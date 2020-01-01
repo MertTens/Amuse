@@ -28,3 +28,5 @@ Goals for the project are as follows:
 * Sub-50Hz frequencies were cut off.
 * Every half second: Transform the last 512 samples to the frequency domain ⇒ record FFT.
     - This results in a 'window' that is 512 samples wide and is 'slid' 256 samples at a time.
+
+For reference on the methods by which we calculate the FFT, see EliOS Analysis Jupyter Notebook.

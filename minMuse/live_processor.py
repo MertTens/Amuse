@@ -3,6 +3,7 @@ from datetime import datetime
 from muse import Muse
 from bluepy.btle import Scanner, DefaultDelegate
 import sys
+import numpy as np
 
 # from datetime import timezone
 
@@ -19,8 +20,9 @@ for i in range(len(transient_matrix)):
 
 def eeg(data, time):
     cnt += 1
-    for i in range(len(transient_matrix)):
-        transient_matrix[i].pop()
+    for j in range(12):
+        for i in range(len(transient_matrix)):
+            transient_matrix[i].pop()
 
     eeg1 = data[0]
     eeg2 = data[1]
@@ -29,11 +31,14 @@ def eeg(data, time):
     eeg5 = data[4]
 
     transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
+    transient_matrix[1] = [eeg2] + transient_matrix[1]
+    transient_matrix[2] = [eeg3] + transient_matrix[2]
+    transient_matrix[3] = [eeg4] + transient_matrix[3]
+    transient_matrix[4] = [eeg5] + transient_matrix[4]
 
+    if cnt == 256:
+        cnt = 0
+        print('256 has been reached. Transient matrix is {} long.'.format(len(transient_matrix[0])))
 
     timestamp = time[0]
     for i in range(12):
