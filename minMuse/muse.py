@@ -45,7 +45,7 @@ class Muse():
 
     def connect(self, interface=None, backend='auto'):
         """Connect to the device"""
-
+ 
         if self.backend == 'gatt':
             self.interface = self.interface or 'hci0'
             self.adapter = pygatt.GATTToolBackend(self.interface)
