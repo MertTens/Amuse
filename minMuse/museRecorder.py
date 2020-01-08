@@ -10,30 +10,14 @@ import sys
 csv = open("data/muse-recording_{0}.csv".format(datetime.now().strftime('%Y%m%dT%H%M%S')), 'w')
 csv.write("timestamp,eeg1,eeg2,eeg3,eeg4,eeg5(aux)\n")
 
-cnt = 0 # variable to keep track of how many samples have passed
-        # since the last time we took the FFT (every 256 samples)
-transient_matrix = [[], [], [], [], []]
-for i in range(len(transient_matrix)):
-    for j in range(512):
-        transient_matrix[i].push(0)
 
 def eeg(data, time):
-    cnt += 1
-    for i in range(len(transient_matrix)):
-        transient_matrix[i].pop()
 
     eeg1 = data[0]
     eeg2 = data[1]
     eeg3 = data[2]
     eeg4 = data[3]
     eeg5 = data[4]
-
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-    transient_matrix[0] = [eeg1] + transient_matrix[0]
-
 
     timestamp = time[0]
     for i in range(12):
