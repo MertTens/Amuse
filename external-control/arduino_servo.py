@@ -12,17 +12,17 @@ def led_on_off():
     if user_input =="on":
         print("LED is on...")
         time.sleep(0.1) 
-        ser.write(b'H') 
+        ser.write(b'90') 
         led_on_off()
     elif user_input =="off":
         print("LED is off...")
         time.sleep(0.1)
-        ser.write(b'L')
+        ser.write(b'1')
         led_on_off()
     elif user_input =="quit" or user_input == "q":
         print("Program Exiting")
         time.sleep(0.1)
-        ser.write(b'L')
+        ser.write(b'1')
         ser.close()
     else:
         print("Invalid input. Type on / off / quit.")
