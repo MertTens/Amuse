@@ -12,7 +12,7 @@ import struct
 
 # Define the serial port and baud rate.
 # Ensure the 'COM#' corresponds to what was seen in the Windows Device Manager
-ser = serial.Serial('/dev/ttyACM0', 9600)
+ser = serial.Serial('/dev/ttyACM1', 115200)
 
 def send_servo(numDegrees):
     if numDegrees <= 0:
@@ -142,9 +142,12 @@ for i in range(len(transient_matrix)):
 
 
 largest_val = 0
+counter =0
 
 def eeg(data, time):
 
+    global counter
+    counter+=1
     cnt = 258
     for j in range(12):
         for i in range(len(transient_matrix)):
@@ -185,7 +188,8 @@ def eeg(data, time):
 
     print('Value written to servo: {}'.format(test_write_val))
 
-    send_servo(test_write_val)
+    if counter%10==0:
+        send_servo(test_write_val)
 
 
     timestamp = time[0]
@@ -216,7 +220,7 @@ def findMuse():
                 print("No Muses found!")
 
 #Iniciamos Clase Muse
-muse = Muse(address=findMuse(),eeg=True,callback=eeg,accelero=False,giro=False)
+muse = Muse(address="00:55:da:b5:0d:79",callback=eeg)
 #muse = Muse(address="00:55:DA:B7:0B:E9",eeg=True,callback=eeg,accelero=False,giro=False)
 #muse = Muse(address="00:06:66:6C:05:91", eeg=True, callback=eeg, accelero=False, giro=False)
 
