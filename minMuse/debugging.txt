@@ -1,11 +1,8 @@
-When trying to re-install bitstring: Requirement already satisfied: bitstring in 
+# HOW TO GET MUSE CONNECTION TO WORK
 
-/lib/python3.7/site-packages (3.1.6)
-
-
-BITSTRING IS ALREADY INSTALLED IN (3.1.6)
-
-When trying to run museRecorder.py: Bitstring not found
-
-When printing out the paths of everything: ['/home/aman/Documents/minMuse', '/home/aman/Documents/minMuse/museEnv/lib/python37.zip', '/home/aman/Documents/minMuse/museEnv/lib/python3.7', '/home/aman/Documents/minMuse/museEnv/lib/python3.7/lib-dynload', '/usr/lib/python3.7', '/home/aman/Documents/minMuse/museEnv/lib/python3.7/site-packages']
-
+1. Restart computer. 
+2. Open terminal and navigate to `Amuse` project directory.
+3. Activate the `museEnv` virtual environment.
+4. Navigate to `minMuse` folder.
+5. Type `sudo python3 live_plot.py` or whichever Muse-connected script you need.
+6. Keep trying it until it works (the connection protocol is non-deterministic, at least on my IdeaPad S145 running Ubuntu)

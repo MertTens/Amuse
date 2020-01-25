@@ -22,8 +22,8 @@ void loop() {
 
   if(incomingByte != 0){
     
-    Serial.print("Writing to servo int: ");
-    Serial.println(incomingByte);
+//    Serial.print("Writing to servo int: ");
+//    Serial.println(incomingByte);
     
     myservo.write(incomingByte);
   }

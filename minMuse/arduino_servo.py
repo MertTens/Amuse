@@ -17,8 +17,8 @@ def led_on_off(numDegrees):
     print('Bytes being written are: {}'.format(asBytes))
     ser.write(asBytes)
 
-time.sleep(2) # wait for the serial connection to initialize
-
-while True:
-    user_input = int(input("\n Type some number of degrees : "))
-    led_on_off(user_input)
+# time.sleep(2) # wait for the serial connection to initialize
+#
+# while True:
+#     user_input = int(input("\n Type some number of degrees : "))
+#     led_on_off(user_input)

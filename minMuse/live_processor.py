@@ -5,6 +5,26 @@ from bluepy.btle import Scanner, DefaultDelegate
 import sys
 import numpy as np
 
+### Serial Connection Functions ###
+import serial
+import time
+import struct
+
+# Define the serial port and baud rate.
+# Ensure the 'COM#' corresponds to what was seen in the Windows Device Manager
+ser = serial.Serial('/dev/ttyACM0', 9600)
+
+def send_servo(numDegrees):
+    if numDegrees <= 0:
+        numDegrees = 1
+    elif numDegrees >= 170:
+        numDegrees = 170
+
+    asBytes = bytearray(str(numDegrees), 'utf-8')
+
+    print('Bytes being written are: {}'.format(asBytes))
+    ser.write(asBytes)
+
 ### ANALYSIS FUNCTIONS ####
 
 # Fourier Transformation Functions
@@ -120,7 +140,11 @@ for i in range(len(transient_matrix)):
     for j in range(512):
         transient_matrix[i] += [0]
 
+
+largest_val = 0
+
 def eeg(data, time):
+
     cnt = 258
     for j in range(12):
         for i in range(len(transient_matrix)):
@@ -138,16 +162,35 @@ def eeg(data, time):
     transient_matrix[3] = eeg4 + transient_matrix[3]
     transient_matrix[4] = eeg5 + transient_matrix[4]
 
-    bands_0 = getBands(transient_matrix[0])
-    print(bands_0)
+    bands_0 = getBands(transient_matrix[0], log=True)
+    bands_1 = getBands(transient_matrix[1], log=True)
+    bands_2 = getBands(transient_matrix[2], log=True)
+    bands_3 = getBands(transient_matrix[3], log=True)
+    bands_4 = getBands(transient_matrix[4], log=True)
+
+    # Testing motor control:
+    largest_val = 8
+
+    try:
+        test_write_val = 1/bands_0['R']
+    except:
+        test_write_val = 0
+
+
+    test_write_val /= largest_val
+
+    test_write_val *= 160
+
+    test_write_val = abs(test_write_val)
+
+    print('Value written to servo: {}'.format(test_write_val))
+
+    send_servo(test_write_val)
 
 
     timestamp = time[0]
     for i in range(12):
         csv.write("{0},{1},{2},{3},{4},{5}\n".format(timestamp, eeg1[i], eeg2[i], eeg3[i], eeg4[i], eeg5[i]))
-
-    # print( "EEG:",data[4])
-        #print("Time:",time[0])
 
 
 # Function to get all acc data
