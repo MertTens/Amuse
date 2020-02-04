@@ -7,8 +7,10 @@ int incomingByte;
 
 void setup() {
   // put your setup code here, to run once:
+
+  pinMode(11, OUTPUT);
   Serial.begin(9600);
-  myservo.attach(9);
+  myservo.attach(11);
 }
 
 void loop() {
@@ -20,11 +22,10 @@ void loop() {
 
   incomingByte = int(Serial.parseInt());
 
-  if(incomingByte != 0){
-    
-    Serial.print("Writing to servo int: ");
-    Serial.println(incomingByte);
-    
-    myservo.write(incomingByte);
+  if(incomingByte == 2){
+    myservo.write(90);
+  }
+  else if(incomingByte == 3){
+    myservo.write(45);
   }
 }
