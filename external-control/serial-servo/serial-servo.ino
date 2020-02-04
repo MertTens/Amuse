@@ -27,5 +27,11 @@ void loop() {
   }
   else if(incomingByte == 3){
     myservo.write(45);
+  if(incomingByte != 0){
+    
+//    Serial.print("Writing to servo int: ");
+//    Serial.println(incomingByte);
+    
+    myservo.write(incomingByte);
   }
 }

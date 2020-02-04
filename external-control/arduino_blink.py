@@ -5,24 +5,27 @@ import time
 
 # Define the serial port and baud rate.
 # Ensure the 'COM#' corresponds to what was seen in the Windows Device Manager
-ser = serial.Serial('/dev/cu.usbmodem144101', 9600)
+ser = serial.Serial('/dev/ttyACM0', 9600)
 
 def led_on_off():
     user_input = input("\n Type on / off / quit : ")
     if user_input =="on":
         print("LED is on...")
-        time.sleep(0.1) 
-        ser.write(b'H') 
+        time.sleep(0.1)
+        varb = b'90'
+        print('Variable being written: {}'.format(varb))
+        print('Type of variable being written: {}'.format(type(varb)))
+        ser.write(b'90')
         led_on_off()
     elif user_input =="off":
         print("LED is off...")
         time.sleep(0.1)
-        ser.write(b'L')
+        ser.write(b'1')
         led_on_off()
     elif user_input =="quit" or user_input == "q":
         print("Program Exiting")
         time.sleep(0.1)
-        ser.write(b'L')
+        ser.write(b'1')
         ser.close()
     else:
         print("Invalid input. Type on / off / quit.")
