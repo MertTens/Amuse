@@ -79,7 +79,9 @@ def processEEG(d1, d2, d3, d4, d5):
 def eeg(data, trash=True):
     global callbackTime
     callbackTime = time.time()
-    eeg1 = data[0]
+    signal_processor.process_eeg(data)
+    
+    """eeg1 = data[0]
     eeg2 = data[1]
     eeg3 = data[2]
     eeg4 = data[3]
@@ -88,7 +90,9 @@ def eeg(data, trash=True):
         csv.write("{0},{0},{0},{0},{0}\n".format(eeg5[i], eeg4[i], eeg3[i], eeg2[i], eeg1[i]))
         print("{0},{0},{0},{0},{0}\n".format(eeg5[i], eeg4[i], eeg3[i], eeg2[i], eeg1[i]))
         
-        processEEG(eeg1[i], eeg2[i], eeg3[i], eeg4[i], eeg5[i])
+        processEEG(eeg1[i], eeg2[i], eeg3[i], eeg4[i], eeg5[i])"""
+
+        
 
 
 def runListener():
