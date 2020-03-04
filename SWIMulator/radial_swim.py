@@ -26,7 +26,8 @@ import math
 # %matplotlib tk
 
 # constants
-CHUNK = 1024 * 2             # samples per frame
+# CHUNK = 1024 * 2             # samples per frame
+CHUNK = 802 * 2
 FORMAT = pyaudio.paInt16     # audio format (bytes per sample?)
 CHANNELS = 1                 # single channel for microphone
 RATE = 44100                 # samples per second
@@ -57,7 +58,7 @@ print(x.shape)
 
 print(x)
 # create a line object with random data
-line, = ax.plot(x, np.random.rand(CHUNK), '-', lw=2, color='#ccffcc')
+line, = ax.plot(x, np.random.rand(CHUNK), '-', lw=2, color='#330033')
 
 # basic formatting for the axes
 ax.set_title('')
@@ -67,7 +68,7 @@ ax.set_ylim(-1, 259)
 ax.set_xticks([]) 
 ax.set_yticks([]) 
 
-ax.set_facecolor((0,0,0))
+ax.set_facecolor((1,1,1))
 # ax.set_axis_bgcolor((0,0,0))
 # ax.set_xlim(0, 360)
 # plt.setp(ax, xticks=[0, CHUNK, 2 * CHUNK], yticks=[0, 128, 255])
